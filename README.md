@@ -1,36 +1,43 @@
 # MelcoExam
 sakura.fukuyoshi
 
-open terminal
+Open terminal
 
-npm install
+> npm install
 
-How to run emulator
+## How to run local server
 
-For Android
+> cd server
 
-go to mobile directory
+> node index.js
 
-cd mobile
 
-then run android by typing 
+## How to run emulator
 
-yarn android
+### For Android
 
-or
+Go to mobile directory
 
-npx react-native android
+> cd mobile
 
-For iOS
+> npx react-native start
 
-go to mobile directory by typing
+Then run android by typing 
 
-cd mobile
+> yarn android
 
-then type
+### For iOS
 
-pod install --project-directory=ios
+Go to mobile directory by typing
 
-after doing it, type this to run on emulator
+> cd mobile
 
-yarn ios
+Then type
+
+> pod install --project-directory=ios
+
+> npx react-native start
+
+After doing it, type this to run on emulator
+
+> yarn ios
