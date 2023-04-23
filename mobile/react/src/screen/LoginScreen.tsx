@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState} from 'react';\
+import React, {useState} from 'react';
 import {Alert, StyleSheet, TextInput, View} from 'react-native';
 import {CustomButton} from '../component/CustomButton';
 import {isEmpty} from '../helper/function';
