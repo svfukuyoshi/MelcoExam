@@ -9,12 +9,14 @@ export default function LoginScreen({navigation}) {
   const [password, setPassword] = useState('');
 
   function login() {
+    const url = 'http://cb21-136-158-120-233.ngrok.io';
     axios
-      .post('http://localhost:3000/login', {username, password})
+      .post(`${url}/login`, {username, password})
       .then(res => {
         if (res.data.isSuccess) {
-          navigation.navigate('Otp', {otp: res.data.otp})
+          navigation.navigate('Otp', {otp: res.data.otp});
         } else {
+          console.log('LSDFJLSF');
           Alert.alert(res.data.errorMessage);
         }
       })
@@ -34,6 +36,7 @@ export default function LoginScreen({navigation}) {
       <TextInput
         style={styles.textInputStyle}
         value={username}
+        placeholderTextColor={`grey`}
         autoCapitalize="none"
         placeholder="Username"
         onChangeText={val => {
@@ -44,6 +47,7 @@ export default function LoginScreen({navigation}) {
         style={styles.textInputStyle}
         value={password}
         placeholder="Password"
+        placeholderTextColor={`grey`}
         secureTextEntry
         onChangeText={val => {
           setPassword(val.trim());
@@ -64,6 +68,7 @@ const styles = StyleSheet.create({
   textInputStyle: {
     width: '100%',
     marginBottom: 12,
+    color: 'black',
     borderColor: 'black',
     borderWidth: 0.5,
     borderRadius: 10,

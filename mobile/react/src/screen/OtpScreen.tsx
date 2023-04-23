@@ -42,15 +42,3 @@ export default function OtpScreen({navigation, route}) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  textInputStyle: {
-    width: '100%',
-    marginBottom: 12,
-    borderColor: 'black',
-    borderWidth: 0.5,
-    borderRadius: 10,
-    padding: 10,
-    fontSize: 16,
-  },
-});
