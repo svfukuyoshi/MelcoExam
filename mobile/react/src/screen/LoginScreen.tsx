@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState} from 'react';
+import React, {useState} from 'react';\
 import {Alert, StyleSheet, TextInput, View} from 'react-native';
 import {CustomButton} from '../component/CustomButton';
 import {isEmpty} from '../helper/function';
@@ -7,21 +7,27 @@ import {isEmpty} from '../helper/function';
 export default function LoginScreen({navigation}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false)
 
   function login() {
-    const url = 'http://cb21-136-158-120-233.ngrok.io';
+
+    const url = 'http://cb21-136-158-120-233.ngrok.io'
+
+    setLoading(true)
     axios
       .post(`${url}/login`, {username, password})
       .then(res => {
         if (res.data.isSuccess) {
           navigation.navigate('Otp', {otp: res.data.otp});
+          setLoading(false)
         } else {
-          console.log('LSDFJLSF');
           Alert.alert(res.data.errorMessage);
+          setLoading(false)
         }
       })
       .catch(e => {
         Alert.alert(e.message);
+        setLoading(false)
       });
   }
 
@@ -55,9 +61,9 @@ export default function LoginScreen({navigation}) {
       />
       <CustomButton
         name={'LOGIN'}
-        disabled={isEmpty(username.trim()) || isEmpty(password.trim())}
+        disabled={isEmpty(username.trim()) || isEmpty(password.trim()) || loading}
         onPress={() => {
-          login();
+            login();
         }}
       />
     </View>
