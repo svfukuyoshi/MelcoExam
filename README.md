@@ -5,11 +5,20 @@ Open terminal
 
 > npm install
 
+
 ## How to run local server
 
 > cd server
 
-> node index.js
+> ngrok http 3000
+
+Copy the forwarding url and go to LoginScreen.tsx that can be found in
+
+> mobile/react/screen/LoginScreen.tsx
+
+then change the url in line 14 to forwarding url you got from the console
+
+Note: ngrok was unsed because localhost is not working in Android when connecting to the API. It is alwayrs returning Network Error.
 
 
 ## How to run emulator
@@ -25,6 +34,7 @@ Go to mobile directory
 Then run android by typing 
 
 > yarn android
+
 
 ### For iOS
 
