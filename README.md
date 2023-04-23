@@ -58,6 +58,7 @@ After doing it, type this to run on emulator
 ##  For username and password
 
 Username: melco
+
 Password: Test123!
 
 ## For OTP
