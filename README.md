@@ -10,6 +10,8 @@ Open terminal
 
 > cd server
 
+> node index.js
+
 > ngrok http 3000
 
 Copy the forwarding url and go to LoginScreen.tsx that can be found in
@@ -51,3 +53,13 @@ Then type
 After doing it, type this to run on emulator
 
 > yarn ios
+
+
+##  For username and password
+
+Username: melco
+Password: Test123!
+
+## For OTP
+
+You may see the otp in the console
