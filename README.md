@@ -20,7 +20,7 @@ Copy the forwarding url and go to LoginScreen.tsx that can be found in
 
 then change the url in line 14 to forwarding url you got from the console
 
-Note: ngrok was unsed because localhost is not working in Android when connecting to the API. It is alwayrs returning Network Error.
+Note: ngrok was used because localhost is not working in Android when connecting to the API. It is always returning Network Error.
 
 
 ## How to run emulator
